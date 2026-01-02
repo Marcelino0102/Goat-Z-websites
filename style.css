@@ -1,0 +1,760 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at left, #0c3b44, #000);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #00eaff;
+}
+
+.icons {
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.icons a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.icons i:hover {
+  color: #00eaff;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  color: #b5d6dc;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.hero-images {
+  position: relative;
+  width: 520px;
+  height: 320px;
+}
+
+/* Base image style */
+.hero-img {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+  transition: 0.4s ease;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LEFT IMAGE */
+.hero-img.left {
+  left: 0;
+  top: 50px;
+  transform: scale(0.9);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* CENTER IMAGE (MAIN) */
+.hero-img.center {
+  left: 130px;
+  top: 0;
+  width: 260px;
+  height: 260px;
+  z-index: 3;
+  background: #00cfe8;
+}
+
+/* RIGHT IMAGE */
+.hero-img.right {
+  right: 0;
+  top: 50px;
+  transform: scale(0.9);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Hover effect */
+.hero-img:hover {
+  transform: translateY(-10px) scale(1.05);
+  opacity: 1;
+  z-index: 4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.roadmap {
+  padding: 60px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 28px;
+}
+
+.roadmap-container {
+  display: grid;
+  grid-template-columns: 60px 1fr 300px;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline .line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: #1ecad3;
+  top: 0;
+}
+
+.timeline .dot {
+  width: 12px;
+  height: 12px;
+  background: #1ecad3;
+  border-radius: 50%;
+  margin: 60px 0;
+  z-index: 1;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #1ecad3;
+  padding: 20px 25px;
+  border-radius: 12px;
+}
+
+.card p {
+  line-height: 1.5;
+  margin: 10px;
+  margin: 0%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.card li {
+  color: #8fe7ec;
+  font-size: 14px;
+}
+
+.date {
+  background: #1ecad3;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.stacking {
+  text-align: center;
+  font-weight: bold;
+}
+
+.staking {
+    align-content: center;
+}
+
+.staking-example {
+  font-size: 16px;
+  font-weight: 600px;
+  margin-bottom: 10px;
+}
+
+
+.staking-list {
+  margin-top: 22px;
+}
+
+.staking-list,
+.staking-reward {
+  padding-left: 18px;
+}
+
+.staking-list li,
+.staking-reward li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* BUTTON AREA DI BAWAH STAKING */
+.staking-action {
+  margin-top: 50px ;      /* jarak dari card */
+  padding-left: 5px;    /* geser sedikit ke kanan (opsional) */
+}
+
+/* CONNECT BUTTON (pakai style lama kamu, ini aman) */
+.connect-btn {
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  padding: 20px 42px;
+  border-radius: 20px;
+  border: 2px solid #00eaff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.4);
+}
+
+.connect-btn:hover {
+  background: #00eaff;
+  color: #000;
+  box-shadow: 0 0 18px rgba(0, 234, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+
+/* Images */
+.images {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.img-box {
+   width: 80%;
+  height: 200px;
+  background: #e5e5e5;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden
+}
+
+/* Kotak bawah dengan gambar */
+.img-bottom {
+  background: radial-gradient(circle at left, #0c3b44, #000);;
+  box-shadow: 0 0 25px rgba(30, 202, 211, 0.4);
+}
+
+/* Gambar di dalam kotak bawah */
+.img-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Kotak bawah dengan gambar */
+.img-top {
+  background: #ffffff;
+  box-shadow: 0 0 25px rgba(30, 202, 211, 0.4);
+}
+
+/* Gambar di dalam kotak bawah */
+.img-top img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* MEMES SECTION */
+
+/* SECTION */
+.memes-section {
+  margin-top: 120px;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.memes-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+/* WRAPPER */
+.memes-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* TRACK */
+.memes-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  animation: meme-scroll 30s linear infinite;
+}
+
+.memes-track:hover {
+  animation-play-state: paused;
+}
+
+/* CARD */
+.meme-card {
+  width: 220px;
+  height: 220px;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  flex-shrink: 0;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.meme-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.35);
+}
+
+/* KOTAK GAMBAR */
+.meme-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px dashed rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGE */
+.meme-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PLACEHOLDER */
+.meme-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* ANIMASI */
+@keyframes meme-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* About us section */
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 120px 20px 80px;
+  text-align: center;
+  background: #000;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.about-text {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* LOGO */
+.about-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.about-logo img {
+  width: 36px;
+  height: auto;
+}
+
+.about-logo span {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* SOCIAL ICONS */
+.about-socials {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  margin-bottom: 40px;
+}
+
+.about-socials a {
+  color: white;
+  font-size: 18px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.about-socials a:hover {
+  opacity: 1;
+}
+
+/* footer section */
+
+.footer {
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #000;
+}
+
+.footer p {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+
+/* ========================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 40px;
+  }
+
+  .staking-action {
+    margin-top: 50px;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-images {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .menu {
+    display: none; /* simple hide (bisa dibuat burger nanti) */
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .staking-action {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-images {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+  }
+
+  .hero-img {
+    width: 200px !important;
+    height: 200px !important;
+
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-img.center {
+    width: 230px;
+    height: 230px ;
+    z-index: 3;
+  }
+
+  /* kiri & kanan digeser ke samping tapi tetap BESAR */
+  .hero-img.left {
+     margin-right: -60px;
+    z-index: 1;
+    opacity: 0.85;
+  }
+
+  .hero-img.right {
+    margin-left: -60px;
+    z-index: 1;
+    opacity: 0.85;
+  }
+
+  /* Hero HOVER */
+
+  .hero-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    opacity: 1;
+    z-index: 4;
+  }
+
+
+  /* ROADMAP */
+
+  .roadmap {
+    padding: 60px 20px;
+  }
+
+  .roadmap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline {
+    display: none; /* timeline disembunyikan di mobile */
+  }
+
+  .content
+  .images {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .card p,
+  .card li {
+    font-size: 14px;
+  }
+
+ .date {
+  display: inline-block;
+  margin: 6px 0;
+ }
+
+  /* STAKING CARD */
+  .staking-card {
+    padding: 20px;
+  }
+
+  .staking-title {
+    font-size: 18px;
+  }
+
+  .staking-subtitle,
+  .staking-example {
+    font-size: 15px;
+  }
+
+  .staking-card li {
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .staking-example {
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  /* ROADMAP IMAGES */
+  .images {
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
+    align-items: center;
+  }
+
+  .img-box {
+    width: 200px;
+  }
+
+  .img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* MEMES */
+  .memes-title {
+    font-size: 26px;
+  }
+
+  /* ABOUT */
+  .about-section {
+    padding: 60px 20px;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .connect-btn {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+
+  .hero-img {
+    width: 75px;
+  }
+
+  .img-box {
+    width: 120px;
+  }
+
+  .staking-desc {
+    font-size: 13px;
+  }
+}
